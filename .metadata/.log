@@ -1,0 +1,267 @@
+!SESSION 2016-09-29 15:53:55.201 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.buildship.core 2 0 2016-09-29 15:54:17.339
+!MESSAGE Could not load Gradle version information
+!STACK 0
+org.gradle.api.UncheckedIOException: Cannot download published Gradle versions.
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:175)
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:159)
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:119)
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:66)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.0 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(HttpURLConnection.java:2085)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:183)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:172)
+	... 4 more
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-09-29 15:54:17.626
+!MESSAGE Server ‘org.jboss.tools’ failed with exception: プロキシー認証が必要です。; バージョン: 2.0.1.v20160605-1811
+!STACK 0
+org.apache.http.client.HttpResponseException: Proxy Authentication Required
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseHandler.handleResponse(HttpResponses.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:92)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:1)
+	at org.apache.http.client.fluent.Response.handleResponse(Response.java:90)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses.getContentWithProgress(HttpResponses.java:55)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:69)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-09-29 15:54:18.667
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: プロキシー認証が必要です。; バージョン: 2.0.1.v20160605-1811
+!STACK 0
+org.apache.http.client.HttpResponseException: Proxy Authentication Required
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseHandler.handleResponse(HttpResponses.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:92)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:1)
+	at org.apache.http.client.fluent.Response.handleResponse(Response.java:90)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses.getContentWithProgress(HttpResponses.java:55)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:69)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.epp.mpc.core 1 0 2016-09-29 15:54:18.814
+!MESSAGE Cannot parse XML at URL http://marketplace.eclipse.org/node/472922/api/p: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+!STACK 1
+org.eclipse.epp.mpc.core.service.UnmarshalException: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:65)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:141)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:101)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:88)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:289)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:303)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sf.feeling.decompiler.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:55)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateUrl(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateVersion(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.isForce(Unknown Source)
+	at org.sf.feeling.decompiler.SetupRunnable$2.run(SetupRunnable.java:109)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 26; columnNumber: 3; 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:61)
+	... 15 more
+Contains: Received response begins with:
+
+1: <HTML>
+2: <HEAD>
+3: <META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+!SUBENTRY 1 org.eclipse.epp.mpc.core 1 0 2016-09-29 15:54:18.815
+!MESSAGE Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 26; columnNumber: 3; 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:61)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:141)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:101)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:88)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:289)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:303)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sf.feeling.decompiler.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:55)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateUrl(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateVersion(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.isForce(Unknown Source)
+	at org.sf.feeling.decompiler.SetupRunnable$2.run(SetupRunnable.java:109)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.epp.mpc.core 1 0 2016-09-29 15:54:18.815
+!MESSAGE Received response begins with:
+
+1: <HTML>
+2: <HEAD>
+3: <META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+!SUBENTRY 1 org.eclipse.epp.mpc.core 1 0 2016-09-29 15:54:18.815
+!MESSAGE Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 26; columnNumber: 3; 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:61)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:141)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:101)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:88)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:289)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:303)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sf.feeling.decompiler.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:55)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateUrl(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateVersion(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.isForce(Unknown Source)
+	at org.sf.feeling.decompiler.SetupRunnable$2.run(SetupRunnable.java:109)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.epp.mpc.core 1 0 2016-09-29 15:54:18.815
+!MESSAGE Received response begins with:
+
+1: <HTML>
+2: <HEAD>
+3: <META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+
+!ENTRY org.sf.feeling.decompiler 4 0 2016-09-29 15:54:18.820
+!MESSAGE 
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sf.feeling.decompiler.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:55)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateUrl(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateVersion(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.isForce(Unknown Source)
+	at org.sf.feeling.decompiler.SetupRunnable$2.run(SetupRunnable.java:109)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/node/472922/api/p: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:171)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:101)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:88)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:289)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:303)
+	... 10 more
+Caused by: org.eclipse.epp.mpc.core.service.UnmarshalException: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:65)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:141)
+	... 14 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 26; columnNumber: 3; 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:61)
+	... 15 more
+Root exception:
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/node/472922/api/p: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:171)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:101)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:88)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:289)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.getNode(DefaultMarketplaceService.java:303)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sf.feeling.decompiler.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:55)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateUrl(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.getUpdateVersion(Unknown Source)
+	at org.sf.feeling.decompiler.update.DecompilerUpdateHandler.isForce(Unknown Source)
+	at org.sf.feeling.decompiler.SetupRunnable$2.run(SetupRunnable.java:109)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.epp.mpc.core.service.UnmarshalException: Invalid response content: 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:65)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:141)
+	... 14 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 26; columnNumber: 3; 要素タイプ"META"は、対応する終了タグ"</META>"で終了する必要があります。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:61)
+	... 15 more
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:44.877
+!MESSAGE 重複テンプレート ID: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:44.930
+!MESSAGE 重複テンプレート ID: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:44.965
+!MESSAGE 重複テンプレート ID: 'zigen.plugin.db.template.sql.case'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:45.090
+!MESSAGE 重複テンプレート ID: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:45.095
+!MESSAGE 重複テンプレート ID: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-29 15:56:45.105
+!MESSAGE 重複テンプレート ID: 'zigen.plugin.db.template.sql.case'
+
+!ENTRY org.eclipse.jface 2 0 2016-09-29 15:56:46.702
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-09-29 15:56:46.702
+!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
+		Open a dialog to search for and insert code snippets,
+		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f453c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
+		,
+		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18fb7a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-09-29 15:56:46.702
+!MESSAGE CTRL+- の競合が発生しました:
+Binding(CTRL+-,
+	ParameterizedCommand(Command(org.eclipse.gef.zoom_out,ズームアウト,
+		ズームアウト,
+		Category(org.eclipse.gef.category.view,ビュー,ビュー,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a7226e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+-,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.zoomOut,ズームアウト,
+		テキストのズーム・アウト - テキスト・エディターのデフォルト・フォント・サイズを小さくします,
+		Category(org.eclipse.ui.category.textEditor,テキスト編集,テキスト編集コマンド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@199ce06,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+-,
+	ParameterizedCommand(Command(junit.extensions.eclipse.quick.pde.command.PDEJUnitRunAction,JUnit Plug-in テスト,
+		PDE JUnitでテストを実行します．,
+		Category(junit.extensions.eclipse.quick.command.category,Quick JUnit,Quick JUnitアクション,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c7a727,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
