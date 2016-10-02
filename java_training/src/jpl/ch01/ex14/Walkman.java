@@ -1,6 +1,6 @@
 package jpl.ch01.ex14;
 
-public class Walkman {
+abstract class Walkman {
 	private int terminal;
 	private int sirial;
 	private String model;
@@ -11,9 +11,8 @@ public class Walkman {
 		this.iniTerminal();
 
 	}
-	public void iniTerminal(){
-		this.setTerminal(1);;
-	}
+	public abstract void iniTerminal();
+	
 	public void setTerminal(int i){
 		this.terminal = i;
 	}
@@ -26,6 +25,10 @@ public class Walkman {
 	}
 	public String getModel(){
 		return this.model;
+	}
+	public void printSpec(){
+		System.out.println("シリアル番号："+this.getSirial()+"モデル："+this.getModel()+"端子数"+this.getTerminal());
+		//System.out.println("シリアル番号："+walkman[i].getSirial()+"モデル："+walkman[i].getModel()+"端子数"+walkman[i].getTerminal());
 	}
 
 }
